@@ -1,11 +1,23 @@
 html,body{
     height: 100%;
     margin: 0;
+    color: var(--teal-light);
 }
+:root{
+    --font:var(--font);
+    --teal-light:#ccfbf1;
+    --teal-light2:#99f6e4;
+    --teal-med:#2dd4bf;
+    --teal-med2:#14b8a6;
+    --teal-dark:#0f766e;
+    --teal-dark2:#115e59;
 
+}
+li{
+    list-style-type: none;
+}
 #container{
     height: 100%;
-    text-align: center;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(5,1fr);
@@ -44,3 +56,52 @@ html,body{
     grid-column: 1/2;
     background-color: brown;
 }
+
+/* Sidebar */
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--teal-dark);
+}
+/* Sidebar Header */
+.sidebar-header{
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem;
+    margin-left: 1rem;
+}
+.sidebar-header >img{
+align-self: center;
+   width: 50px;
+   height: 50px;
+}
+.sidebar-header>p{
+    font-size: 22px;
+}
+
+/* Sidebar List */
+.sidebar-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-list >li{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 1rem;
+    border: 2px var(--teal-light2) solid;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+.sidebar-list >li:hover{
+    background-color: var(--teal-light2);
+    color: var(--teal-dark);
+    box-shadow: 0 5px var(--teal-med);
+}
+
+
