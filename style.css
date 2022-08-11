@@ -10,6 +10,9 @@
     font-family: product-sans-Italic;
     src: url(./product-sans/Product\ Sans\ Italic.ttf);
 }
+* {
+    box-sizing: border-box;
+  }
 
 :root{
     --green:#1DB954;
@@ -19,6 +22,27 @@
     --font-r: product-sans;
     --font-i: product-sans-Italic;
     --font-b: product-sans-B;
+}
+@media (min-width: 60em){
+    #container{
+        grid-template-columns: repeat(5,1fr);
+    }
+    #sidebar{
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    #header{
+        grid-column: 2/6;
+    }
+    #skills{
+        grid-column: 5/6;
+        grid-row: 2/4;
+    }
+    #main-content{
+        grid-column: 2/5;
+        grid-row: 2/4;
+    }
+    
 }
 .box>p{
     margin: 0;
@@ -36,13 +60,9 @@ li{
 #container{
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-
 }
 /* Sidebar */
 #sidebar{
-    grid-column: 1/2;
-    grid-row: 1/4;
     display: flex;
     flex-direction: column; 
     padding: 1rem;
@@ -71,7 +91,6 @@ li{
     gap: 1rem;
     margin: 0;
     padding: 0;
-    
 }
 a{
     -webkit-appearance: button;
@@ -90,7 +109,6 @@ a{
     border: 0.5px var(--white) solid;
     border-radius: 8px;
     padding-left: 1rem;
-    
 }
 .sidebar-list >li>a{
     color: var(--white);
@@ -109,7 +127,6 @@ a{
 
 /* Header */
 #header{
-    grid-column: 2/6;
     background-color: var(--gray);
     border-bottom: 3px solid var(--green);
     color: var(--black);
@@ -117,9 +134,8 @@ a{
 .header-text{
     display: flex;
     flex-direction: column;
-    min-height: 150px;
     gap: .3rem;
-    
+    margin-bottom: 1rem;
 }
 .header-text>h3{
     font-size: 28px;
@@ -139,10 +155,7 @@ a{
 
 /* Main Content */
 #main-content{
-    min-width: 570px;
     flex-direction: column;
-    grid-column: 2/5;
-    grid-row: 2/4;
     background-color: var(--gray);
     color: var(--black);
 }
@@ -166,8 +179,6 @@ a{
     color: var(--black);
     border-radius: 5px;
     padding: 1rem;
-    min-width: 300px;
-    min-height: 200px;
 }
 
 .box-options{
@@ -181,8 +192,6 @@ a{
 #skills{
     display: flex;
     flex-direction: column;
-    grid-column: 5/6;
-    grid-row: 2/4;
     background-color: var(--gray);
     color: var(--black);
     font-family: var(--font-b);
