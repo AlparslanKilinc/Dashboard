@@ -20,7 +20,9 @@
     --font-i: product-sans-Italic;
     --font-b: product-sans-B;
 }
-
+.box>p{
+    margin: 0;
+}
 html,body{
     height: 100%;
     margin: 0;
@@ -165,9 +167,9 @@ a{
     border-radius: 5px;
     padding: 1rem;
     min-width: 300px;
-    min-height: 120px;
-  
+    min-height: 200px;
 }
+
 .box-options{
     display: flex;
     margin-top: 1rem;
