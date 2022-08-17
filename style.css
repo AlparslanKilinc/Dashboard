@@ -1,14 +1,14 @@
 @font-face {
-    font-family: product-sans;
-    src: url(./product-sans/Product\ Sans\ Regular.ttf);
+    font-family: Assistant-Regular;
+    src: url(./Assistant-Font/Assistant-Regular.ttf);
 }
 @font-face {
-    font-family: product-sans-B;
-    src: url(./product-sans/Product\ Sans\ Bold.ttf);
+    font-family: Assistant-Bold;
+    src: url(./Assistant-Font/Assistant-Bold.ttf);
 }
 @font-face {
-    font-family: product-sans-Italic;
-    src: url(./product-sans/Product\ Sans\ Italic.ttf);
+    font-family: Assistant-Light;
+    src: url(./Assistant-Font/Assistant-Light.ttf);
 }
 * {
     box-sizing: border-box;
@@ -19,9 +19,9 @@
     --black:#191414;
     --white:#FFFFFF;
     --gray: #f3f4f6;
-    --font-r: product-sans;
-    --font-i: product-sans-Italic;
-    --font-b: product-sans-B;
+    --font-Regular:  Assistant-Regular;
+    --font-Bold:  Assistant-Bold;
+    --font-Light:  Assistant-Light;
 }
 @media (min-width: 60em){
     #container{
@@ -51,7 +51,7 @@ html,body{
     height: 100%;
     margin: 0;
     color: var(--black);
-    font-family: var(--font-r);
+    font-family: var(--font-Regular);
 }
 
 li{
@@ -148,7 +148,7 @@ a{
     margin-left: 1rem;
     margin-bottom: 0;
     margin-top: 0;
-    font-family: var(--font-i);
+    font-family: var(--font-Light);
 }
 
 
@@ -194,7 +194,7 @@ a{
     flex-direction: column;
     background-color: var(--gray);
     color: var(--black);
-    font-family: var(--font-b);
+    font-family: var(--font-Bold);
 }
 
 /* tech */
@@ -248,6 +248,7 @@ a{
     margin-bottom: 1rem;
 }
 .education-box{
+    font-family: var(--font-Regular);
     background-color: var(--white);
     border-radius: 5px;
     border-left: 4px solid var(--green);
